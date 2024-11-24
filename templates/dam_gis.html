@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<!--Gis monitoring slider-->
+<div class="isimba-slider" style="margin-top: 95px;">
+    <div class="column-wrapper">
+
+        <div class="column column-1">
+            <div class="isimba-rtm-card">
+                <h4>
+                    GIS <br> monitoring
+                </h4>
+            </div>
+        </div>  
+        
+        <div class="column dam-column">
+            <div class="dam-carousel">
+                <div class="slider">
+                    <section id="isimba-gis-sec1">
+                        <div class="slider-column">
+                            <div class="isimba-column">
+                                <div class="isimba-sc-card">
+                                    <h3> mm</h3>
+                                    <p>Water Level</p>
+                                </div>
+                                <div class="isimba-sc-card">
+                                    <h3>{{ temperature }}&deg;C</h3>
+                                    <p>Temperature</p>
+                                </div>
+                            </div>
+                            <div class="isimba-column">
+                                <div class="sc-card">
+                                    <h3>{{ humidity }}%</h3>
+                                    <p>Humidity</p>
+                                </div>
+                                <div class="sc-card">
+                                    <h3>{{ precipitation }}mm</h3>
+                                    <p>Precipitation</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--Graphs-->
+<div class="card-container">
+    <div class="isimba-card">
+        <div class="isimba-card-header">
+        <h3>Water Level</h3>
+        </div>
+        <div class="isimba-card-content">
+            <div id="chart_div1" style="width: 100%;"></div>
+        </div>
+    </div>
+    <div class="isimba-card">
+        <div class="isimba-card-header">
+        <h3>Humidity</h3>
+        </div>
+        <div class="isimba-card-content">
+            <div id="chart_div6" style="width: 100%;"></div>
+        </div>
+    </div>
+</div>
+
+<div class="card-container cc2-remote">
+    <div class="isimba-card">
+        <div class="isimba-card-header">
+        <h3>Temperature</h3>
+        </div>
+        <div class="isimba-card-content">
+            <div id="chart_div3" style="width: 100%;"></div>
+        </div>
+    </div>
+    <div class="isimba-card">
+        <div class="isimba-card-header">
+        <h3>Precipitation</h3>
+        </div>
+        <div class="isimba-card-content">
+            <div id="chart_div4" style="width: 100%;"></div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
